@@ -1,4 +1,3 @@
-// Import libraries here
 import java.util.Scanner;
 import java.util.Random;
 // Arlo Ashton
