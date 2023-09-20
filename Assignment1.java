@@ -3,22 +3,37 @@ import java.util.Scanner;
 // Arlo Ashton
 public class Assignment1 {
   public static void main(String[] args) {
-    String userString;
+    String userString, letter1, letter2, letter3, processedString;
     float userTemperature;
 
     //PRINTS INITIALS
     System.out.println(
-     "\n      A             A       "
-    +"\n     A A           A A      "
-    +"\n    A   A         A   A     "
-    +"\n   AAAAAAA       AAAAAAA    "
-    +"\n  AA     AA     AA     AA   "
-    +"\n AAA     AAA   AAA     AAA  "
+     "\n      A             A     "
+    +"\n     A A           A A    "
+    +"\n    A   A         A   A   "
+    +"\n   AAAAAAA       AAAAAAA  "
+    +"\n  AA     AA     AA     AA "
+    +"\n AAA     AAA   AAA     AAA"
     );
-    //GETS USER VALUES FOR STRING AND TEMPERATURE
+//GETS USER VALUE FOR STRING
 Scanner stringScan = new Scanner(System.in);
 System.out.println("Enter a 5 Character Long String:");
 userString = stringScan.nextLine();
+int length = userString.length();
+// CHECKS IF STRING IS 5 CHARACTERS
+if (length > 5){
+  System.out.println("String LONGER than 5 characters...");
+  System.exit(0);
+}
+else if (length <= 4){
+  System.out.println("String SHORTER than 5 characters...");
+  System.exit(0);
+}
+
+letter1 = userString.substring(1, 2);
+letter2 = userString.substring(2, 3);
+letter3 = userString.substring(3, 4);
+processedString = letter3 + letter2 + letter1;
 
 Scanner temperatureScan = new Scanner(System.in);
 System.out.println("Enter a temperature value in farenheit:");
