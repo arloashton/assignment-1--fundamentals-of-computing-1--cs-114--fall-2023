@@ -1,11 +1,12 @@
 // Import libraries here
 import java.util.Scanner;
+import java.util.Random;
 // Arlo Ashton
 public class Assignment1 {
   public static void main(String[] args) {
     String userString, letter1, letter2, letter3, processedString;
     float userTemperature;
-
+    int intRandom;
     //PRINTS INITIALS
     System.out.println(
      "\n      A             A     "
@@ -18,8 +19,10 @@ public class Assignment1 {
 //GETS USER VALUE FOR STRING
 Scanner stringScan = new Scanner(System.in);
 System.out.println("Enter a 5 Character Long String:");
+
 userString = stringScan.nextLine();
 int length = userString.length();
+
 // CHECKS IF STRING IS 5 CHARACTERS
 if (length > 5){
   System.out.println("String LONGER than 5 characters...");
@@ -41,5 +44,12 @@ userTemperature = temperatureScan.nextFloat();
 
 float celcius = (userTemperature - 32) * 5/9;
 System.out.println(celcius);
+
+//RANDOM NUMBER SECTION
+Random rand = new Random();
+intRandom = rand.nextInt(16384);
+
+//Prints Final Step :D
+System.out.println(celcius + processedString + intRandom);
   }
 }
