@@ -13,7 +13,7 @@ public class Assignment1 {
     +"\n    A   A         A   A   "
     +"\n   AAAAAAA       AAAAAAA  "
     +"\n  AA     AA     AA     AA "
-    +"\n AAA     AAA   AAA     AAA"
+    +"\n AA       AA   AA       AA"
     );
 //GETS USER VALUE FOR STRING
 Scanner stringScan = new Scanner(System.in);
